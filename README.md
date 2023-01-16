@@ -68,11 +68,16 @@ System.out.println(l);
 
 
 
+변수 이름 규칙
+
+- camelCase
+- 숫자로 시작 불가능
 
 
 
 
-### IntelliJ 단축어
+
+### IntelliJ 단축어&단축키
 
 - main
 
@@ -87,5 +92,21 @@ public static void main(String[] args) {
 
 ```java
 System.out.println();
+```
+
+
+
+- `ctrl` + `d`
+
+```
+문장(한 줄) 복사
+```
+
+
+
+- `ctrl`+`shift`+`/`
+
+```
+/* */ 여러 줄 주석처리
 ```
 
