@@ -71,6 +71,7 @@ System.out.println(l);
 변수 이름 규칙
 
 - camelCase
+- snake_case
 - 숫자로 시작 불가능
 
 
