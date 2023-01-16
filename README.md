@@ -76,6 +76,57 @@ System.out.println(l);
 
 
 
+변수와 다르게 상수는 중간에 값을 바꿀 수 없다
+
+상수는 모두 대문자로 표기한다
+
+```java
+final String NAME = "ME";
+NAME = "YOU"; // 값 변경 불가능!
+
+// 상수의 네이밍에 여러 단어 포함일 경우 _ 로 구분
+final Stirng DATE_OF_BIRTH = "1999-08-02;
+
+```
+
+
+
+형변환 
+
+```java
+int score = 93;
+System.out.println(score); // 93
+
+// 정수 -> 실수로 변환 (int -> float, double)
+System.out.println((float) score); // 93.0
+System.out.println((double) score); // 93.0
+
+// float, double -> int
+float score_float = 93.3f;
+double score_double = 98.8;
+System.out.println((int) score_float); // 93 -> 소숫점 이하는 버려짐, 반올림x
+System.out.println((int) score_double); // 98 -> 소숫점 이하는 버려짐, 반올림x
+
+
+// 정수로 선언 값 = 정수 + 실수 -> 불가능! 실수를 정수로 형변환하여 연산
+score = 93 + (int) 98.8; // 93 + 98
+System.out.println(score); // 191
+
+// 실수로 선언 값 = 정수 + 실수 -> 가능! 정수가 double로 자동 형변환
+score_double = 93 + 98.8; // == (double) 93 + 98.8
+System.out.println(score_double); // 191.8
+
+// 변수에 형변환된 데이터 집어넣기
+double newDoubleScore = score; // double 에 int 넣기 => int가 double로 자동 형변환 -> 191.0
+// int -> long -> float -> double ( 자동 형변환 : 굳이 선언해서 형번환 해줄 필요 x )
+
+
+// int에 double 넣기 불가능 -> 선언해줘야함
+// int newIntScore = score_double;
+int newIntScore = (int) score_double;
+// double -> float -> long -> int ( 수동 형변환 )
+```
+
 
 
 ### IntelliJ 단축어&단축키
