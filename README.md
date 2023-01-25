@@ -35,6 +35,8 @@ static 객체에서 static이 아닌 객체를 호출하는 것은 불가능
 
 ---
 
+### 선언
+
 선언과 동시에 초기화 할 수 있다
 
 ```java
@@ -68,7 +70,7 @@ System.out.println(l);
 
 
 
-변수 이름 규칙
+### 변수 이름 규칙
 
 - camelCase
 - snake_case
@@ -91,7 +93,7 @@ final Stirng DATE_OF_BIRTH = "1999-08-02;
 
 
 
-형변환 
+### 형변환 
 
 ```java
 int score = 93;
@@ -128,6 +130,34 @@ int newIntScore = (int) score_double;
 ```
 
 
+
+
+
+### 배열
+
+- 형태[] `배열이름` = new 형태[`배열크기`] ;
+- 형태 `배열이름[]` = new 형태[`배열크기`];
+- 형태[] `배열이름` = new 형태[] {`item1`, `item2`, ...}; 
+- 형태[] `배열이름` = {`item1`, `item2`, ...}; 
+
+```java
+String[] coffees = new String[4];
+String names[] = new String[4];
+String[] coffees = new String[] {"아메리카노", "카페모카", "라떼"}; // 이때는 배열 사이즈 작성 x
+String[] coffees = {"아메리카노", "카페모카", "라떼"};
+```
+
+
+
+#### 배열에 값 넣기
+
+배열[`index`] = `넣을 값`;
+
+size는 해당 index만큼 존재하지만, 아무값도 넣지않는다면 null을 반환 -> 에러가 나진 않음
+
+```java
+coffees[0] = "아메리카노";
+```
 
 
 
