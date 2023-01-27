@@ -1,7 +1,7 @@
 # Learn Java!
 > 자바 개인 연습 repo
 
-- 01_Basic
+- [01_Basic](01_Basic.md)
 - 02_Method
 
 
