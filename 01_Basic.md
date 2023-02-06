@@ -131,6 +131,8 @@ int newIntScore = (int) score_double;
 
 
 
+- Integer.parseInt(`다른 형`) : Int로 형변환
+
 
 
 #### 아스키코드
