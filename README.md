@@ -3,7 +3,7 @@
 
 - [01_Basic](01_Basic.md)
 - [02_Method](02_Method.md)
-- 03_Class
+- [03_Class](03_Class.md)
 
 
 
