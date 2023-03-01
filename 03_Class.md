@@ -6,6 +6,8 @@
 
 - [변수](#변수)
 
+- [Method](#Method)
+
   
 
 
@@ -94,3 +96,43 @@ public static void main(String[] args) {
 - 모든 객체에 동일하게 반영하고 싶은 값이 있는경우는 `Class 변수` 사용 
 - `객체명.변수` 말고 `Class명.변수`가 권장 방식
 
+
+
+
+
+### Method
+
+```java
+// Class Student.java 
+public class Student {
+    String studentName;
+    
+    static boolean graduation = false;
+    
+    // 반환값이 없을 경우 void
+    void autoCheck() {
+        if (graduation) {
+            System.out.println("졸업하였습니다.");
+        }
+        else {
+            System.out.println("재학중입니다.");
+        }
+    }
+    }
+}
+```
+
+```java
+Student s1 = new Student();
+s1.studentName = "가나다";
+
+s1.autoCheck(); // "재학중입니다."
+Student.graduation = true;
+s1.autoCheck(); // "졸업하였습니다."
+```
+
+- `반환타입` `메소드명()` {
+
+  ​	...
+
+  }
