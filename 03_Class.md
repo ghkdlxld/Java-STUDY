@@ -136,3 +136,32 @@ s1.autoCheck(); // "졸업하였습니다."
   ​	...
 
   }
+
+
+
+
+
+### Method Overloading
+
+```java
+void exam(eng, kor, time) {
+    System.out.println("시험을 시작합니다.");
+    if (eng) {
+        System.out.println("영어시험을 시작합니다.");
+    }
+    if (kor) {
+        System.out.println("국어시험을 시작합니다.");
+    }
+    System.out.println("시험은" + time + "시간 동안 진행됩니다.");
+}
+
+
+void exam() {
+    // 하나하나 다시 정의할 수도 있지만 다시 함수를 호출하여 사용 가능
+    exam(true, true, 5);
+}
+```
+
+이름이 같은 메소드라도 전달값의 타입이 다르거나, 갯수가 다를 경우 가능
+
+같은 클래스 내에서 메소드 오버로딩 가능
