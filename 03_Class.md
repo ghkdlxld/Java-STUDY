@@ -161,3 +161,57 @@ void exam() {
 같은 클래스 내에서 메소드 오버로딩 가능
 
 재 정의 시 원래의 메소드를 호출하여 사용 가능
+
+
+
+
+
+
+
+### Class Method
+
+```java
+static void call() {
+    System.out.println("우리집(1234-5678)에 전화해.");
+}
+```
+
+method 앞에 static을 사용하여 정의
+
+class method (x) => 객체마다 각각 다른 인스턴스변수를 가지기 때문에 객체마다 각각 다르게 동작할 수 있음
+
+class method (0) => 어느 객체에서든 같은 동작 (모든 객체에 공통적으로 적용)
+
+
+
+**객체를 만들지 않고 class의 class method에 직접 접근도 가능**
+
+```java
+Student s1 = new Student();
+s1.call();	// "우리집(1234-5678)에 전화해."
+
+Student.call(); // "우리집(1234-5678)에 전화해."
+```
+
+
+
+**static으로 선언한 static  변수는 static method에서 사용 가능**
+
+인스턴스 변수는 사용 불가능 -> 인스턴스 변수의 사용이 필요 없는 경우에 class method 활용 가능
+
+```java
+// 위에서 정의한 static 변수 graduation
+// static boolean graduation = false;
+
+
+// 위에서 정의한 인스턴스 변수 studentName
+// String studentName;
+
+
+static void call() {
+    System.out.println("우리집(1234-5678)에 전화해.");
+    graduation = false; // 가능
+    studentName = "가나다"; // 불가능
+}
+```
+
