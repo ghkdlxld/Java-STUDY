@@ -215,3 +215,66 @@ static void call() {
 }
 ```
 
+
+
+
+
+
+
+
+
+### This
+
+기존의 studentName 인스턴스 변수에 입력된 매개변수를 더해서 출력하는 method를 만드려고 한다
+
+```java
+// 1.
+void appendStudentName(String studentName) {
+	studentName += studentName;
+}
+
+// 올바른 예시
+void appendStudentName(String studentName) {
+	this.studentName += studentName;
+}
+```
+
+1번처럼 작성하게 되면 그냥 매개변수 += 매개변수 를 실행하고 끝나버린다.
+
+인스턴스 변수와 매개변수의 이름이 같을 때, 인스턴스 변수에 변화를 주고 싶다면 this를 사용한다 
+
+=> `this.변수` 로 작성하여 인스턴스변수와 매개변수를 구분해줄 수 있다.
+
+
+
+
+
+
+
+### 생성자
+
+```java
+Student() {
+	System.out.println("기본 생성자 호출")
+}
+```
+
+```java
+public static void main(String[] args) {
+    Student s1 = new Student(); // 기본 생성자 호출
+}
+```
+
+맨 처음 객체를 만들 때, 자동으로 호출되는 메서드
+
+생성자를 사용하여 편하게 객체 생성시 인스턴스 변수값을 넣어줄 수 있다.
+
+```java
+public static void main(String[] args) {
+    Student s1 = new Student();
+    s1.studentName = "가나다";
+    s1.school = "abc고등학교";
+    s1.studentnum = 20230424;
+}
+```
+
